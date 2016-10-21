@@ -1,0 +1,18 @@
+{
+  "apps": [
+    {
+      "name": "copr-web-1",
+      "script": "app.js",
+      "args": "",
+      "watch": false,
+      "merge_logs": true,
+      "cwd": "./",
+      "exec_mode": "fork_mode",
+      "min_uptime": "24h",
+      "max_restarts": 10,
+      "error_file": "./logs/copr-web-1-err.log",
+      "out_file": "./logs/copr-web-1.log",
+      "restart_delay": 5000
+    }
+  ]
+}

@@ -1,32 +1,32 @@
 {
     "development":{
         "connector":[
-             {"id":"connector-server-1", "host":"127.0.0.1", "port":4050, "clientPort": 3050, "frontend": true},
-             {"id":"connector-server-2", "host":"127.0.0.1", "port":4051, "clientPort": 3051, "frontend": true},
-             {"id":"connector-server-3", "host":"127.0.0.1", "port":4052, "clientPort": 3052, "frontend": true}
+             {"id":"connector-server-1", "host":"127.0.0.1", "port":14050, "clientPort": 13050, "frontend": true},
+             {"id":"connector-server-2", "host":"127.0.0.1", "port":14051, "clientPort": 13051, "frontend": true},
+             {"id":"connector-server-3", "host":"127.0.0.1", "port":14052, "clientPort": 13052, "frontend": true}
          ],
         "chat":[
-             {"id":"chat-server-1", "host":"127.0.0.1", "port":6050},
-             {"id":"chat-server-2", "host":"127.0.0.1", "port":6051},
-             {"id":"chat-server-3", "host":"127.0.0.1", "port":6052}
+             {"id":"chat-server-1", "host":"127.0.0.1", "port":16050},
+             {"id":"chat-server-2", "host":"127.0.0.1", "port":16051},
+             {"id":"chat-server-3", "host":"127.0.0.1", "port":16052}
         ],
         "gate":[
-	       {"id": "gate-server-1", "host": "127.0.0.1", "clientPort": 3014, "frontend": true}
+	       {"id": "gate-server-1", "host": "127.0.0.1", "clientPort": 13014, "frontend": true}
 	    ]
     },
     "production":{
            "connector":[
-             {"id":"connector-server-1", "host":"127.0.0.1", "port":4050, "clientPort": 3050, "frontend": true},
-             {"id":"connector-server-2", "host":"127.0.0.1", "port":4051, "clientPort": 3051, "frontend": true},
-             {"id":"connector-server-3", "host":"127.0.0.1", "port":4052, "clientPort": 3052, "frontend": true}
+             {"id":"connector-server-1", "host":"127.0.0.1", "port":14050, "clientPort": 13050, "frontend": true},
+             {"id":"connector-server-2", "host":"127.0.0.1", "port":14051, "clientPort": 13051, "frontend": true},
+             {"id":"connector-server-3", "host":"127.0.0.1", "port":14052, "clientPort": 13052, "frontend": true}
          ],
         "chat":[
-             {"id":"chat-server-1", "host":"127.0.0.1", "port":6050},
-             {"id":"chat-server-2", "host":"127.0.0.1", "port":6051},
-             {"id":"chat-server-3", "host":"127.0.0.1", "port":6052}
+             {"id":"chat-server-1", "host":"127.0.0.1", "port":16050},
+             {"id":"chat-server-2", "host":"127.0.0.1", "port":16051},
+             {"id":"chat-server-3", "host":"127.0.0.1", "port":16052}
         ],
         "gate":[
-           {"id": "gate-server-1", "host": "127.0.0.1", "clientPort": 3014, "frontend": true}
+           {"id": "gate-server-1", "host": "127.0.0.1", "clientPort": 13014, "frontend": true}
         ]
   }
 }

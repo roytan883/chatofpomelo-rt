@@ -1,51 +1,38 @@
-## Chatofpomelo
+## Chatofpomelo-rt
 
-A simple chat room experiment using pomelo framework and html5.
-The chat server currently runs on nodejs v0.8, and should run fine on the latest stable as well.It requires the following npm libraries:
-- pomelo
-- express
-- crc
+### A simple chat room experiment using pomelo framework and html5.
 
-Both of them can be installed via 'sh npm-install.sh' (it will install a local copy of all the dependencies in the node_modules directory)
+### 这是个人维护版本，原版来自于chatofpomelo-websocket，但是原版已经不再维护
+### 此版本配合pomelo-rt使用
 
-## Viewing
+## install(node v4 or v6)
+```
+git clone https://github.com/roytan883/chatofpomelo-rt
+cd game-server && npm install && cd ../web-server && npm install && cd ..
+```
 
- * Visit [demo game github](https://github.com/NetEase/chatofpomelo) to get the source code and install it on your local machine.
+## run
+### pm2 run  
+```
+cd game-server && pm2 start pm2/pm2-dev.json && cd ../web-server && pm2 start pm2/pm2-dev.json && cd ..
+```
+### or use nodejs run it directly 
+```
+cd game-server
+node app.js env=development id=master-server-1 host=127.0.0.1 port=13005 type=master
+node app.js env=development id=connector-server-1 host=127.0.0.1 port=14050 clientPort=13050 frontend=true serverType=connector
+node app.js env=development id=chat-server-1 host=127.0.0.1 port=16050 serverType=chat
+node app.js env=development id=gate-server-1 host=127.0.0.1 clientPort=13014 frontend=true serverType=gate
+cd web-server
+node app.js
+```
 
-## Configuration
+## use
 
- * The server setting (server number, host and port, etc.) can be configured in 'game-server/config/servers.json' and 'game-server/config/master.json' files.
- * Other settings (log4js etc.) also can be configured in 'game-server/config' folder.
+http://serverIP:3001/
 
-## Deployment
-Enter chatofpomelo/game-server, and run 'pomelo start' or 'node app.js' in order to start the game server.
-Enter chatofpomelo/web-server, and run 'node app.js' in order to start the web server, and access '3001' port (which can be changed in 'app_express.js') to load game.
+serverIP should be your server ip
 
-## Monitoring
 
-Pomelo framework provides monitoring tool: AdminConsole. After game is loaded, you can access '7001' port and monitor the game information(operating-system, process, userInfo, sceneInfo, etc.).
 
-## License
 
-(The MIT License)
-
-Copyright (c) 2013 NetEase, Inc. and other contributors
-
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-'Software'), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
-
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-SOFTWARE OR THE USE OR OT`HER DEALINGS IN THE SOFTWARE.

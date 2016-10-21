@@ -161,18 +161,21 @@ function queryEntry(uid, callback) {
 	var route = 'gate.gateHandler.queryEntry';
 	pomelo.init({
 		host: window.location.hostname,
-		port: 3014,
+		port: 13014,
 		log: true
 	}, function() {
 		pomelo.request(route, {
-			uid: uid
+			uid: uid,
+			reqServerHost:window.location.hostname
 		}, function(data) {
 			pomelo.disconnect();
 			if(data.code === 500) {
 				showError(LOGIN_ERROR);
 				return;
 			}
-			callback(data.host, data.port);
+			//callback(data.host, data.port);
+			//先强制使用同样的host地址，因为demo中服务器地址设置为127.0.0.1，这样局域网不能访问
+			callback(window.location.hostname, data.port);
 		});
 	});
 };

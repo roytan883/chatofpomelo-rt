@@ -1,10 +1,10 @@
-var pomelo = require('pomelo');
+var pomelo = require('pomelo-rt');
 var routeUtil = require('./app/util/routeUtil');
 /**
  * Init app for client.
  */
 var app = pomelo.createApp();
-app.set('name', 'chatofpomelo-websocket');
+app.set('name', 'chatofpomelo-rt');
 
 // app configuration
 app.configure('production|development', 'connector', function(){
@@ -18,6 +18,7 @@ app.configure('production|development', 'connector', function(){
 });
 
 app.configure('production|development', 'gate', function(){
+	console.log("============set gate config");
 	app.set('connectorConfig',
 		{
 			connector : pomelo.connectors.hybridconnector,
