@@ -1,0 +1,60 @@
+{
+  "apps": [
+    {
+      "name": "copr-master-server-1",
+      "script": "app.js",
+      "args": "env=production type=master id=master-server-1 host=127.0.0.1 port=13005",
+      "watch": false,
+      "merge_logs": true,
+      "cwd": "./",
+      "exec_mode": "fork_mode",
+      "min_uptime": "24h",
+      "max_restarts": 10,
+      "error_file": "./logs/copr-master-server-1-err.log",
+      "out_file": "./logs/copr-master-server-1.log",
+      "restart_delay": 5000
+    },
+    {
+      "name": "copr-connector-server-1",
+      "script": "app.js",
+      "args": "env=production id=connector-server-1 host=127.0.0.1 port=14050 clientPort=13050 frontend=true serverType=connector",
+      "watch": false,
+      "merge_logs": true,
+      "cwd": "./",
+      "exec_mode": "fork_mode",
+      "min_uptime": "24h",
+      "max_restarts": 10,
+      "error_file": "./logs/copr-connector-server-1-err.log",
+      "out_file": "./logs/copr-connector-server-1.log",
+      "restart_delay": 5000
+    },
+    {
+      "name": "copr-chat-server-1",
+      "script": "app.js",
+      "args": "env=production id=chat-server-1 host=127.0.0.1 port=16050 serverType=chat",
+      "watch": false,
+      "merge_logs": true,
+      "cwd": "./",
+      "exec_mode": "fork_mode",
+      "min_uptime": "24h",
+      "max_restarts": 10,
+      "error_file": "./logs/copr-chat-server-1-err.log",
+      "out_file": "./logs/copr-chat-server-1.log",
+      "restart_delay": 5000
+    },
+    {
+      "name": "copr-gate-server-1",
+      "script": "app.js",
+      "args": "env=production id=gate-server-1 host=127.0.0.1 clientPort=13014 frontend=true serverType=gate",
+      "watch": false,
+      "merge_logs": true,
+      "cwd": "./",
+      "exec_mode": "fork_mode",
+      "min_uptime": "24h",
+      "max_restarts": 10,
+      "error_file": "./logs/copr-gate-server-1-err.log",
+      "out_file": "./logs/copr-gate-server-1.log",
+      "restart_delay": 5000
+    }
+  ]
+}
