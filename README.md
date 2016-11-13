@@ -5,6 +5,10 @@
 ### 这是个人维护版本，原版来自于chatofpomelo-websocket，但是原版已经不再维护
 ### 此版本配合pomelo-rt使用
 
+![pic1](https://github.com/roytan883/chatofpomelo-rt/blob/master/chartofpomelort-1.JPG)
+![pic1](https://github.com/roytan883/chatofpomelo-rt/blob/master/chartofpomelort-2.JPG)
+![pic1](https://github.com/roytan883/chatofpomelo-rt/blob/master/chartofpomelort-3.JPG)
+
 ## python2
 please make sure you have python2 installed on your  system
 for  Ubuntu 1604 , you can install it by: 
