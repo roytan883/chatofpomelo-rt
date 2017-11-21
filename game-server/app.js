@@ -1,3 +1,5 @@
+process.EventEmitter = require('events');
+
 var pomelo = require('pomelo-rt');
 var routeUtil = require('./app/util/routeUtil');
 /**
